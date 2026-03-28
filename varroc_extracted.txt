@@ -1,0 +1,254 @@
+Eureka3.0 
+Varroc  Innovation Hackathon 
+Company Website: www.varroc.com
+Scan to Explore 
+Eureka3.0
+Complete registration and Idea submission at : Eureka Challenge 3.0 - 2026
+To Share Ideas, 
+
+
+Download 
+Eureka 
+Mobile App
+Access from your 
+phone/desktop
+https://unstop.co
+m/competitions/cr
+p-eureka-
+challenge-30-
+varroc-1648164
+Register 
+Yourself 
+Log in and 
+subscribe to 
+the challenges.
+Give in your 
+creative ideas 
+to the 
+problem 
+statements
+Brainstorm and 
+find solution on 
+challenges.
+Chance to 
+Meet Varroc 
+Leadership 
+team
+Present your 
+idea in big 
+platform
+Preplacement 
+offer to 
+shortlist 
+students
+Opportunity to 
+work in Core 
+Product 
+development 
+company
+2
+There is a Way To Do it Better – Find It!
+
+3
+Problem Statement 1: 
+Description : Cars and small commercial vehicles with higher floor heights often use fixed footsteps 
+that reduce ground clearance and are prone to damage on uneven roads. There is a need for a 
+compact and reliable footstep system that provides safe entry and exit without remaining permanently 
+exposed. This project aims to develop a practical retractable footstep mechanism that deploys when 
+door is opened and retracts when its closed, improving accessibility, safety, and vehicle usability.
+Scope : 1. Design concept must not use any motor to deploy or retract the footstep.
+2. Concepts can be presented in form of CAD models or drawings.
+3. Concepts must be supported with detailed analysis.
+Note - Concepts would be judged basis novelty, simplicity, form-factor and cost-effectiveness.
+Design a simple, robust and cost-effective 
+retractable footstep for cars and small 
+Commercial Vehicles
+
+4
+Problem Statement 2: 
+Description : When riders listen to music through helmet-integrated speakers, their ability to hear 
+surrounding vehicle horns is significantly reduced, increasing the risk of accidents. This concept 
+proposes a smart helmet with a horn detection mechanism that identifies external honking sounds and 
+alerts the rider. The system aims to maintain rider awareness and safety without interrupting the 
+listening experience.
+Scope : 1. Clear and detailed description of the horn detection mechanism concept must be 
+presented.
+2. Concepts must be supported through mathematical calculation, analysis and/or simulations.
+3. The mechanism must be conceptualized for the real time operation.
+Note - Concepts would be judged basis novelty, simplicity, form-factor and cost-effectiveness.
+Develop a cost effective and real time horn 
+detection mechanism in a smart helmet
+
+
+5
+Problem Statement 3: 
+Description : Two-wheeler riders are highly vulnerable to road risks due to exposure, traffic density, 
+and riding habits. An accurate driving behavior score helps objectively assess riding patterns such as 
+speed control, braking, acceleration,  maneuvering, etc. Reliable scoring is essential to identify unsafe 
+behaviors, promote responsible riding, support rider training, and enable fair evaluation for safety 
+programs, insurance benefits, and smart mobility systems.
+Scope : 1. Logic behind “how this behavior scoring methodology is accurate and reliable” must be 
+presented.
+2. Clear and detailed description of the driving behavior score, sensors used, data logging, etc. must 
+be presented.
+3. Concepts must be supported through mathematical calculation, analysis and/or simulations.
+4. The mechanism must be conceptualized for the real time operation.
+Note - Concepts would be judged basis novelty, simplicity, form-factor and cost-effectiveness.
+Accurate calculation of a driving behavior 
+score on a two-wheeler
+
+
+6
+Problem Statement 4: 
+Description : In Permanent Magnet Synchronous Motors (PMSMs), the temperature of the permanent 
+magnet directly affects motor efficiency, torque capability, and long-term reliability. Excessive magnet 
+temperature can lead to irreversible demagnetization and performance degradation, while direct 
+temperature measurement of the rotor magnet is difficult due to its rotating and enclosed nature. 
+Therefore, accurate online temperature estimation is essential to monitor magnet health in real time, 
+enable safe control strategies, prevent thermal damage, and ensure reliable operation of PMSMs, 
+especially in high-performance and electric vehicle applications
+Scope : 1. Clear and detailed description of temperature estimation of permanent magnet, data 
+logging, etc. must be presented.
+3. Concepts must be supported through mathematical calculation, analysis and/or simulations.
+4. The mechanism must be conceptualized for the real time operation.
+Note - Concepts would be judged basis novelty, simplicity, form-factor and cost-effectiveness.
+Online direct/indirect 
+measurement/estimation of permanent 
+magnet temperature in PMSM
+
+
+7
+Problem Statement 5: 
+Description : For the given problem, suggest the appropriate type and number of vents or air 
+breathers required for the removal of condensate (condensed moisture) formed due to a sudden drop 
+in outside temperature. The design should ensure that the maximum time required for condensate 
+removal does not exceed 30 minutes. Assume suitable equations/ properties and refer heat transfer 
+books. Refer the vents details mentioned below .
+Scope : Excel sheet/ MATLAB code / AI/ML model formulas to quickly decide on condensate formed 
+and breather/vent sections .
+Moisture removal from closed box
+
+
+8
+Problem Statement 6: 
+Description : The basic requirement by Automotive lighting systems are “Low beam” for city/village 
+low speed drive & “High Beam” for highspeed driving. 
+But the in current condition the road-users are using High beams everywhere making other road users 
+like upcoming & ongoing vehicles, pedestrians suffering off glare. This makes uncomfortable situation 
+lands into serious accidents counting on life. Using advanced technologies this concern can be 
+addressed by optimizing the headlamp operating condition
+Scope : Effective operating of Main beams of Headlamps for Glare free lighting & to identify or help to 
+identify the poor road conditions earlier; like pat-holes, Unknown obstacles, stray animals, 
+Pedestrians, Road barriers, Diversion barricades.
+How can automotive lighting systems 
+be optimized for poor road infrastructure 
+and high glare conditions in India
+
+
+9
+Problem Statement 7: 
+Description : LEDs have rapidly replaced halogen and HID technologies across headlamps, DRLs, and 
+rear lamps. Their advantages are well established: higher energy efficiency, longer life, faster 
+response times, compact packaging, and significantly greater design freedom.
+Adaptive technologies needs high performance LEDs & the additional precise computing & control 
+system integration on vehicles for operating it. High end software support is another challenge. With 
+such requirements currently its quite costly matter to implement on mass production. 
+Making it cost down & in the affordable range will allow the OEs to use it on mass production vehicles.
+Scope : Efficient design of main beams on Headlamps
+How can advanced LED and adaptive 
+lighting technologies be made affordable 
+for mass-market vehicles in India?
+
+
+10
+Problem Statement 8: 
+Description : With global average temperatures rising and peaks reaching newer records, a parked car, especially for a
+longer duration under direct sunlight, in tropical regions, essentially becomes as hot chamber. With higher temperatures,
+come higher VOCs (not only from the car but also from the objects inside the car). There have been recorded instances
+of people forgetting pets & even infants in locked vehicles in some cases. The durability of the under the hood parts is also
+challenged. There is a need for thermal environment management solutions for parked cars.
+A secondary advantage of this is the reduced energy expense on bringing the cabin temperature down after starting the
+car.
+Scope :
+1. Self explanatory working principle for solution on to maintain ambient temperature of car in parked condition.
+2. Add schematics / Design concept to explain idea.
+3. Explain why your solution is more reliable , cost effective , safe for human & eco friendly sustainable solution .
+4.   Solution should be provided considering Vehicle is in OFF condition / parked condition  (NO battery / NO electric 
+connection available in parked condition)   
+Solution for vehicle cabin overheating in 
+parked condition
+
+
+11
+Problem Statement 9: 
+AI-Driven Design Intelligence for Early-
+Stage CAD Validation
+Description : In current product development workflows, design engineers rely extensively on manual verification to 
+ensure compliance with established design standards. This process is time-consuming, prone to human error, and highly 
+dependent on individual expertise. As a result, design gaps and non-compliance issues are often identified late in the 
+development cycle, leading to rework, project delays, and reduced overall efficiency.
+There is a need for an intelligent system that supports engineers during the design phase by automatically validating designs
+against standard guidelines and performing real-time checks within the CAD environment. Such an AI-assisted solution 
+should enable early detection of design issues, improve overall design quality, reduce iteration cycles, and ensure accurate 
+product development.
+Scope : Design and develop a comprehensive software/Program architecture to achieve the following objectives,
+AI-Integrated CAD Assistance:- Development of a module that integrates with CAD tools to analyse designs in real time 
+and provide actionable insights.
+Automated Design Validation:- The system should automatically detect deviations, inconsistencies, and potential risks, 
+highlight them within the design, and generate detailed validation reports.
+
+Team members 
+Names
+Engineering 
+Specialisation Graduating year College 
+Names
+Confidential
+Team Name : 
+12
+
+[Member 1 name] [Member 2 Name] [Member 3 
+Name]
+Any projects you’ve 
+worked on
+Past Hackathon 
+experiences
+Accolades or awards 
+that you have received
+Other details (If any)
+Tell Us Bit About Yourself
+13
+
+Your Selected Problem Statement
+• Give us an overview of your solution
+• Process Flow (if applicable)
+• Uniqueness of your solution
+14
+
+Design Details
+• Market Research and Literature survey
+• Flow chart/ block diagrams
+• Details with Pictures, Videos of simulations, 
+calculation etc.
+• Working Principle
+• Simulations/Proto sample
+• Benchmarking
+• Innovation/improvement over existing solution
+15
+
+Major Risk And Mitigation 
+• Risks to realise the concept
+• Mitigation
+16
+
+Business Potential 
+• Share details of Business Potential
+• Market Potential/Demand
+17
+
+Plan And Budget Needed
+• Major Milestones and Timelines to realize the 
+concept
+• Budget needed to develop a prototype of this 
+concept
+18
+

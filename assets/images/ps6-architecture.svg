@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #102a43; }
+      .label { font: 600 17px Arial, sans-serif; fill: #102a43; }
+      .small { font: 500 14px Arial, sans-serif; fill: #334e68; }
+      .box1 { fill: #e6f4ff; stroke: #2680c2; stroke-width: 2; rx: 14; }
+      .box2 { fill: #edfdf3; stroke: #2f9e44; stroke-width: 2; rx: 14; }
+      .box3 { fill: #fff4e6; stroke: #d9480f; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #486581; stroke-width: 3; fill: none; marker-end: url(#arr); }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#486581" />
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="#f8fbff" />
+  <text x="40" y="50" class="title">PS6: Glare-Free Headlamp Optimization - Perception and Control
+    Loop</text>
+
+  <rect class="box1" x="40" y="100" width="240" height="120" />
+  <text class="label" x="65" y="145">Input Sensors</text>
+  <text class="small" x="65" y="173">Front camera, ambient light</text>
+  <text class="small" x="65" y="197">Optional low-cost radar</text>
+
+  <rect class="box1" x="320" y="100" width="270" height="120" />
+  <text class="label" x="345" y="145">Scene Understanding</text>
+  <text class="small" x="345" y="173">Vehicle, pedestrian, obstacle</text>
+  <text class="small" x="345" y="197">Pothole and barrier cues</text>
+
+  <rect class="box2" x="630" y="100" width="250" height="120" />
+  <text class="label" x="655" y="145">Glare Risk Estimator</text>
+  <text class="small" x="655" y="173">Oncoming intensity and angle</text>
+  <text class="small" x="655" y="197">Visibility confidence score</text>
+
+  <rect class="box2" x="920" y="100" width="240" height="120" />
+  <text class="label" x="945" y="145">Beam Policy Engine</text>
+  <text class="small" x="945" y="173">Rule + ML decision</text>
+  <text class="small" x="945" y="197">Anti-flicker hysteresis</text>
+
+  <path class="arrow" d="M280 160 L320 160" />
+  <path class="arrow" d="M590 160 L630 160" />
+  <path class="arrow" d="M880 160 L920 160" />
+
+  <rect class="box3" x="200" y="320" width="280" height="150" />
+  <text class="label" x="225" y="365">Headlamp Controller</text>
+  <text class="small" x="225" y="393">Low/High/Adaptive segment</text>
+  <text class="small" x="225" y="417">Fail-safe fallback mode</text>
+  <text class="small" x="225" y="441">Regulatory constraints</text>
+
+  <rect class="box3" x="540" y="320" width="280" height="150" />
+  <text class="label" x="565" y="365">Road Safety Output</text>
+  <text class="small" x="565" y="393">Reduced glare incidents</text>
+  <text class="small" x="565" y="417">Earlier hazard visibility</text>
+  <text class="small" x="565" y="441">Stable beam behavior</text>
+
+  <rect class="box1" x="880" y="320" width="280" height="150" />
+  <text class="label" x="905" y="365">Evaluation Metrics</text>
+  <text class="small" x="905" y="393">Glare score, detection latency</text>
+  <text class="small" x="905" y="417">False dim/high switch rate</text>
+  <text class="small" x="905" y="441">Weather robustness tests</text>
+
+  <path class="arrow" d="M1035 220 L1035 298" />
+  <path class="arrow" d="M920 395 L820 395" />
+  <path class="arrow" d="M540 395 L480 395" />
+</svg>
