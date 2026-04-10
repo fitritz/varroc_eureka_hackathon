@@ -24,6 +24,16 @@ Out of scope:
 - Full insurance backend integration
 - City-scale deployment operations
 
+## 1A. Competitive Intelligence Goal (Selection Critical)
+
+Because shortlist probability is extremely low, the proposal must prove that we understand why many prior telematics-style solutions fail.
+
+Required narrative outputs for Stage 1:
+
+- Existing solution categories and practical limitations.
+- Failure-mode-to-mitigation mapping in our architecture.
+- Measurable differentiation (fairness, reliability, explainability, anti-gaming).
+
 ## 2. Problem Definition
 
 Input:
@@ -48,6 +58,31 @@ Primary event taxonomy:
 5. Weaving / unstable lane behavior proxy
 6. Phone usage proxy (if available from app interaction)
 
+## 2A. Existing Solutions and Observed Failure Patterns
+
+Common existing approaches:
+
+1. Rule-only telematics systems
+2. Smartphone score apps
+3. Fleet behavior dashboards
+4. Proprietary ML-first insurance scoring
+
+Frequent shortcomings:
+
+- Excess false positives under sensor noise and vibration.
+- Mount-position sensitivity causing inconsistent event detection.
+- Weak context handling (traffic/road conditions ignored).
+- Opaque scoring decisions with low rider trust.
+- Limited stress testing under tunnel/dropout/rough-road scenarios.
+
+Our design response:
+
+- Confidence-gated penalties.
+- Context normalization.
+- Mount calibration and repeatability checks.
+- Event-level evidence for every score change.
+- Replay-based benchmarking under fixed scenarios.
+
 ## 3. Scoring Strategy
 
 Final score formula:
@@ -67,6 +102,13 @@ Guardrails:
 - No single event can drop more than configured cap per minute
 - Penalties scaled by confidence and event persistence
 - Context normalization for traffic density and road quality
+
+Additional reliability guardrails:
+
+- Low-confidence events contribute only partial penalty.
+- Sudden isolated spikes must pass persistence logic before severe tagging.
+- Repeated threshold-edge behavior triggers anti-gaming escalation.
+- If signal confidence is below threshold, cap penalties and mark event as uncertain.
 
 ## 4. System Architecture
 
@@ -113,6 +155,16 @@ Modules:
 - Segment risk hotspots.
 - Rider improvement recommendations.
 
+8. Fairness and Reliability Diagnostics
+
+- Score distribution by mount type, road class, and signal quality bands.
+- Stability report using repeated-route replay.
+
+9. Benchmark and Replay Harness
+
+- Fixed scenario packs for heavy traffic, rough roads, GPS dropouts, and aggressive maneuvers.
+- Baseline vs hybrid comparison with identical inputs.
+
 ## 5. Data Plan
 
 ### 5.1 Data Collection
@@ -127,9 +179,15 @@ Collect representative rides across:
 
 Minimum dataset target:
 
-- 100+ trips
-- 30+ distinct riders
-- 3+ mount positions per device type
+- Phase 1 (baseline-ready): 100 to 150 trips, 30+ riders, 3+ mount positions
+- Phase 2 (DL-ready): 1000+ ride hours across 8 to 12 Indian cities
+
+India-specific capture requirements:
+
+- Temporary diversions and rerouted corridors
+- Potholes and speed-breaker-heavy segments
+- Monsoon and post-rain conditions
+- Day, night, and high-traffic festival windows
 
 ### 5.2 Labeling
 
@@ -138,6 +196,12 @@ Create event labels using:
 - Rule-assisted pre-labeling
 - Human review for ambiguous windows
 - Severity tags (low, medium, high)
+
+Scale labeling plan:
+
+- Use weak labels from rule engine for all rides.
+- Use active learning to send only uncertain windows for manual review.
+- Re-train in cycles so annotation effort focuses on high-value edge cases.
 
 ### 5.3 Data Quality Controls
 
@@ -148,7 +212,33 @@ Reject or down-weight segments with:
 - Unrealistic acceleration values
 - Time sync mismatch beyond threshold
 
+### 5.4 Drift Monitoring and Refresh Policy
+
+Monitor drift across:
+
+- City distribution shifts
+- Seasonal shifts (especially monsoon vs dry)
+- Device and mount profile shifts
+
+Refresh policy:
+
+- Monthly drift check with trigger thresholds.
+- Retrain when drift exceeds threshold or severe-event false positives rise.
+- Maintain previous model fallback until new model passes regression gates.
+
 ## 6. Stage 1 Plan: PPT Submission (Current)
+
+## Phase 0: Competitive Teardown (New, before slide finalization)
+
+Deliverables:
+
+- Existing-solution landscape table.
+- Prior-model failure matrix (technical + product + adoption).
+- Differentiation claims mapped to concrete design controls.
+
+Exit criteria:
+
+- Team can answer "Why older models fail" with evidence and architecture links.
 
 ## Phase 1A: Story and Problem Framing
 
@@ -187,6 +277,12 @@ Deliverables:
 Exit criteria:
 
 - PPT convincingly answers: feasibility, reliability, and business impact
+
+Add mandatory proof narrative:
+
+- Why score fairness remains stable across mount and signal conditions.
+- How confidence gating prevents brittle penalties.
+- How anti-gaming logic prevents score manipulation.
 
 ## Phase 1D: Final PPT Packaging
 
@@ -268,6 +364,15 @@ Primary:
 - Mean absolute error vs expert risk rating (if available)
 - Score variance under repeated runs of same route
 
+Additional selection-grade metrics:
+
+- Stability delta across mount conditions.
+- Penalty share from low-confidence events (should remain low).
+- Fairness spread across road classes after normalization.
+- Explainability completeness and evidence consistency rate.
+- Cross-city generalization score on unseen city test set.
+- Seasonal robustness delta (monsoon vs non-monsoon).
+
 Target suggestions:
 
 - Event F1 >= 0.80 for core classes
@@ -303,6 +408,16 @@ Test levels:
 - Freeze benchmark trips
 - Compare every release against baseline metrics
 
+5. Split-policy validation
+
+- Split by city and rider, not random windows.
+- Keep at least one unseen city as final blind robustness set.
+
+6. Safety fallback tests
+
+- Verify low-confidence windows apply capped penalties only.
+- Verify uncertain events remain explainable and auditable.
+
 ## 10. Risk Register and Mitigation
 
 Risk: Sensor mount variability inflates false events.
@@ -319,6 +434,12 @@ Mitigation: Hard-negative mining and iterative relabeling.
 
 Risk: Runtime instability on lower-end phones.
 Mitigation: Lightweight features, quantized model, profiling.
+
+Risk: Users game thresholds by oscillating just below hard limits.
+Mitigation: Persistence-aware escalation and trajectory-level behavior scoring.
+
+Risk: Fairness claims remain subjective without diagnostics.
+Mitigation: Add fairness dashboard and publish per-condition stability metrics.
 
 ## 11. Team Work Breakdown
 
@@ -354,11 +475,13 @@ Show in this order:
 
 - Problem statement and opportunity size
 - Limitations of current solutions
+- Prior-model failure matrix with mitigation mapping
 - Proposed PS3 architecture
 - Event taxonomy and scoring logic
 - Explainability and fairness approach
 - Validation methodology and metrics
 - Risk analysis and mitigation
+- Competitive differentiation with measurable proof points
 - Business impact and scalability
 - Post-selection implementation roadmap
 

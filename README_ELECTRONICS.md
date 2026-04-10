@@ -24,6 +24,8 @@ Electronics team (students):
 
 ## 2. What Hardware Team Must Verify
 
+This section directly addresses common failure points from earlier telematics systems (noise, mount bias, and unstable speed signals).
+
 For every proposed sensor, verify:
 
 1. Is it available and affordable for prototype use?
@@ -39,6 +41,28 @@ Mandatory output from hardware team:
 - Applicable: Yes/No
 - Constraints: clear technical limits
 - Recommendation: use / replace / optional
+
+## 2A. Prior-Model Failure Checks (Must Report)
+
+For each ride batch, hardware team must report:
+
+1. Noise-induced event risk
+
+- How often vibration bursts could look like harsh braking/cornering.
+
+2. Mount-bias risk
+
+- Variance in measured acceleration/rotation across mount positions.
+
+3. GPS overspeed risk
+
+- Frequency of unrealistic speed spikes and recovery lag.
+
+4. Sync integrity risk
+
+- Timestamp misalignment distribution between IMU and GPS.
+
+These checks are mandatory because many earlier models fail precisely on these points.
 
 ## 3. Minimum Sensor Set (Required)
 
@@ -92,6 +116,10 @@ For each mount, provide:
 - Practicality score (1 to 5)
 - Recommendation for production-like mounting
 
+India route requirement:
+
+- Include test routes with potholes, speed breakers, temporary diversions, and mixed traffic density.
+
 ## 6. Event Feasibility Validation Matrix
 
 Hardware team must confirm whether the following events are measurable with confidence.
@@ -120,6 +148,11 @@ Hardware team must confirm whether the following events are measurable with conf
 
 - Feasibility by sensors: Yes/No
 - Notes: lane-level limitation, confidence expectations
+
+6. Pothole and speed-breaker disturbance handling
+
+- Feasibility by sensors: Yes/No
+- Notes: can the system separate road disturbance spikes from risky rider behavior
 
 ## 7. Data Interface Contract (Hardware to Software)
 
@@ -153,6 +186,7 @@ Electronics team signs off only when all are complete:
 5. Mounting recommendation finalized
 6. Event feasibility matrix completed
 7. Known limitations documented
+8. Prior-model failure check report attached (Section 2A)
 
 Sign-off format:
 
@@ -172,6 +206,11 @@ If GPS is unstable:
 
 - Confidence-gate overspeed events
 - Skip scoring in low-confidence windows
+
+If road disturbance dominates (pothole/diversion corridors):
+
+- Apply uncertain-event mode with capped penalties
+- Tag event as low-confidence until persistence criteria are met
 
 If mounting variance is high:
 
